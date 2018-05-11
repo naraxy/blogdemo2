@@ -201,6 +201,7 @@ class PostController extends Controller
     	{
     		$commentModel->status = 1; //新评论默认状态为 pending
     		$commentModel->post_id = $id;
+		$commentModel->create_time = time();
     		if($commentModel->save())
     		{
     			$this->added=1;
